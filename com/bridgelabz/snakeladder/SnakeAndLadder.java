@@ -48,5 +48,9 @@ public class SnakeAndLadder {
             }
             System.out.println("Current Position : Square => " +(100-POSITION)+ " To win the Game");
         }
+        System.out.println();
+        System.out.println("You win the Game");
+        System.out.println();
+        System.out.println("Total Number of dice rolls played = "+DICE);
     }
 }
