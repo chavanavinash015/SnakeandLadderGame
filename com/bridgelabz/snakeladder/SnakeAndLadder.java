@@ -26,23 +26,27 @@ public class SnakeAndLadder {
                 case 0:
                     System.out.println("You Encountered a Ladder");
                     System.out.println("You will move " + SNAKElADDER + " placed Ahead");
-                    POSITION = ROLLDICE + SNAKElADDER;
+                    POSITION += ROLLDICE + SNAKElADDER;
                     break;
 
                 case 1:
                     System.out.println("You Encounterd a Snake");
                     System.out.println("You will move =>" + SNAKElADDER + "<= Places Back");
-                    POSITION = ROLLDICE - SNAKElADDER;
+                    POSITION += ROLLDICE - SNAKElADDER;
 
                 case 2:
                     System.out.println("You Go no Play");
                     System.out.println("You will have to skip your turn");
-                    POSITION = ROLLDICE;
+                    POSITION += ROLLDICE;
                     System.out.println(POSITION);
             }
             if (POSITION < 0)
                 POSITION = 0;
-            System.out.println("Current Position : Square => " + POSITION);
+            else if(POSITION > 100){
+                POSITION -=ROLLDICE;
+                System.out.println("you need to score Exactly ");
+            }
+            System.out.println("Current Position : Square => " +(100-POSITION)+ " To win the Game");
         }
     }
 }
